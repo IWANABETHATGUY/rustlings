@@ -1,13 +1,16 @@
 // iterators4.rs
 
-// I AM NOT DONE
-
 pub fn factorial(num: u64) -> u64 {
-    match num {
-        1 => 1,
-        _ => factorial(num - 1) * num
-    }
-    
+    // let res = 1;
+    // for i in 1..num {
+
+    // }
+    (1..=num).into_iter().fold(1, |acc, cur| acc * cur)
+    // match num {
+    //     1 => 1,
+    //     _ => factorial(num - 1) * num
+    // }
+
     // Complete this function to return the factorial of num
     // Do not use:
     // - return
